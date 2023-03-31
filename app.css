@@ -9,7 +9,8 @@ header {
   margin-top: 90px;
 }
 body {
-  background-color: rgb(139, 139, 139)
+  background-color: rgb(139, 139, 139);
+  font-family: Futura, Arial, sans-serif;
 }
 .header-img-info {
   background-image: url('RECURSOS/REYMEZ.jpg');
@@ -20,14 +21,6 @@ body {
   object-position: 0px -10px;
   height: calc(100% + 10px);
   position: relative; 
-}
-.overlay {
-  position: sticky;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5); /* set the background color to black with an opacity of 0.5 */
 }
 nav {
   position: absolute;
@@ -71,7 +64,7 @@ nav a:hover {
 div {
     border:1px solid #000000;
     background-color:#d6caca;
-    box-shadow:0px 2px 4px rgba(0,0,0,0.1);
+    box-shadow:10px 2px 4px rgba(0,0,0,0.1);
     padding-right:10%;
     padding-left:10%;
     padding-bottom:10%;
@@ -114,6 +107,7 @@ form textarea {
   border: 1px solid #ccc;
   border-radius: 5px;
   margin-bottom: 20px;
+  box-shadow: 5px 9px 10px rgba(0, 0, 0, 0.5);
 }
 
 /* Style the form submit button */
@@ -124,6 +118,7 @@ form input[type="submit"] {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  box-shadow: 5px 9px 10px rgba(0, 0, 0, 0.5);
 }
 
 /* Change the background color of the submit button on hover */
@@ -172,12 +167,13 @@ a:hover {
   border: none;
   border-radius: 5px;
   background-color: #ffffff;
-  color: white;
+  color: #333;
   text-align: center;
   text-decoration: none;
   font-size: 16px;
   transition: all 0.3s;
-  box-shadow: 0 9px rgba(0, 0, 0, 0.5);
+  box-shadow: 5px 9px 10px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease-in-out;
 }
 #follow h2 {
   margin-bottom: 20px;
@@ -188,19 +184,32 @@ a:hover {
 }
 #follow li {
   margin: 0 10px;
-}
-#follow a {
-  text-decoration: none;
-  color: #333;
+  display: flex;
+  align-items: center;
+  height: 50px;
 }
 #follow a:hover {
   background-color: #c2ccc2;
   color: #555;
+  font-size: 14px;
 }
 #follow a:active {
   background-color: #6d726d;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
+}
+#follow li img {
+  display: block;
+  margin: 0 auto;
+  padding: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+#follow li img:hover {
+  transform: scale(1.2);
+}
+#follow li a {
+  text-align: center;
+  transition: font-size 0.3s ease-in-out;
 }
 #contact {
   display: flex;
@@ -212,5 +221,5 @@ a:hover {
 }
 #contact p {
   text-align: center;
-  font-weight: 200;
+  font-weight: bolder;
 }
